@@ -9,6 +9,7 @@ public class Car {
     private int carYear, carAge, carPrice;
 
     //constructors
+    //Default constructor
     public Car() {
         carMake = "Toyota";
         carModel = "Camry";
@@ -18,18 +19,21 @@ public class Car {
         carPrice = 20000;
     }
 
-    public Car(String crMake, String crModel, String crColour, int crAge,
-               int crYear, int crPrice) {
+    //All constructor
+    public Car(String crMake, String crModel, String crColour, int crYear,
+               int crAge, int crPrice) {
+        //This constructor uses all properties
         carMake = crMake;
         carModel = crModel;
+        carColour = crColour;
         carYear = crYear;
         carAge = crAge;
         carPrice = crPrice;
     }
 
     //Alternate constructor
-    public Car(String crMake, String crModel) {
-        //This constructor only uses the make and model
+    public Car(String crMake, String crModel, String crColour, int crYear) {
+        //This constructor doesn't include the age or price
         carMake = crMake;
         carModel = crModel;
         carColour = "Black";
@@ -51,7 +55,9 @@ public class Car {
         String output = "Make: " + carMake + "\n";
         output += "Model: " + carModel + "\n";
         output += "Price: " + carPrice + "\n";
-        output += "Year: " + carYear;
+        output += "Year: " + carYear + "\n";
+        output += "Age: " + carAge + "\n";
+        output += "Price: " + carAge + "\n";
         //output string is complete, return it
         return output;
     }
